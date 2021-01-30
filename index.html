@@ -11,6 +11,7 @@
         rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 
 <body>
@@ -32,7 +33,7 @@
             <h3>Booking Flights</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
                 <label for="">Flying To</label>
@@ -50,30 +51,43 @@
             </div>
             <div class="input-group f-class">
                 <div>
+
+                    <!-- operation 1 -->
+
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="firstClass-count" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <p>+ -</p>
+                    <button id="firstClass-Increase" type="button" class ="btn btn-outline-dark btn-sm">+</button>
+
+                    <button id="firstClass-decrease" type="button" class = "btn btn-outline-dark btn-sm">-</button>
                 </div>
             </div>
-            
+
+                <!-- operation 2 -->
+
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="economyClass-count" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
+                    <button id="economyClass-Increase" type="button" class ="btn btn-outline-dark btn-sm">+</button>
+
+                    <button id="economyClass-decrease" type="button" class = "btn btn-outline-dark btn-sm">-</button>
                 </div>
             </div>
+
+
+
+
             <div class="calculations">
                 <div class="amount">
                     <div class="left">
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p id ="sub-Total">$500</p>
                     </div>
                 </div>
 
@@ -104,7 +118,7 @@
         </div>
     </section>
 
-    <!--Thank You-->
+<script src="index.js"></script>
 </body>
 
 </html>
