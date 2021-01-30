@@ -1,34 +1,22 @@
-document.getElementById('firstClass-Increase').addEventListener('click', function(){
-    // const firstClassInput = document.getElementById('firstClass-count');
-    // const fCount = parseInt(firstClassInput.value);
-    //  const fClassNewCount = fCount + 1;
-    //  firstClassInput.value = fClassNewCount;
-    // var fTotal = fClassNewCount * 150;
+//first class flight
 
+document.getElementById('firstClass-Increase').addEventListener('click', function(){
+    
     firstClassBill(true);
     
     });
 
 
-    document.getElementById('firstClass-decrease').addEventListener('click', function(){
-        // const firstClassInput = document.getElementById('firstClass-count');
-        // const fCount = parseInt(firstClassInput.value);
-        //  const fClassNewCount = fCount - 1;
-        //  firstClassInput.value = fClassNewCount;
-        //  var fTotal = fClassNewCount * 150;     
+    document.getElementById('firstClass-decrease').addEventListener('click', function(){ 
+        
         firstClassBill(false);  
          
         });
 
 
-// eco class level
+// economy class flight
 
 document.getElementById('economyClass-Increase').addEventListener('click', function(){
-    // const ecoClassInput = document.getElementById('economyClass-count');
-    //  const ecoCount = parseInt(ecoClassInput.value);
-    // const ecoClassNewCount = ecoCount + 1;
-    // ecoClassInput.value = ecoClassNewCount;
-    //  var ecoTotal = ecoClassNewCount * 100;  
 
     ecoClassBill (true);
 
@@ -41,7 +29,7 @@ document.getElementById('economyClass-decrease').addEventListener('click', funct
 
 });
 
-// bill for first class
+// bill for economy class
 
        function ecoClassBill (IsIncrease){
         const ecoClassInput = document.getElementById('economyClass-count');
@@ -61,7 +49,7 @@ document.getElementById('economyClass-decrease').addEventListener('click', funct
 
        }
 
-       // economy class function
+       // // bill for first class
 
        function firstClassBill (IsIncrease){
         const firstClassInput = document.getElementById('firstClass-count');
@@ -81,7 +69,7 @@ document.getElementById('economyClass-decrease').addEventListener('click', funct
 
        }
        
-/// sub total
+       // sub total
        
        
         function SubBill (){
@@ -95,12 +83,14 @@ document.getElementById('economyClass-decrease').addEventListener('click', funct
             const finalCost = fCount*150 + ecoCount*100;
             var subTotals = parseInt(finalCost);
 
-            document.getElementById('sub-Total').innerText = '$'+ subTotals;
+             // Sub total
 
+            document.getElementById('sub-Total').innerText = '$'+ subTotals;
+            // Vat total
             var vatCount = Math.round(subTotals*0.1);
             document.getElementById('vat').innerText = '$'+vatCount;
 
-
+            // final bill
             var totalBills = vatCount + subTotals;
             document.getElementById('finalCharge').innerText =totalBills;
 
